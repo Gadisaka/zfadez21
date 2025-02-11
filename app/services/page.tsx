@@ -48,7 +48,7 @@ const Service = () => {
     <div className="w-full min-h-fit flex flex-col bg-[#FCE7C8] text-[#543310] gap-10 lg:p-10 justify-center items-center ">
       <h1 className="text-4xl font-bold my-3 lg:my-0">Our Services</h1>
       <div className="w-full h-full flex">
-        <div className="flex flex-col items-center lg:items-end w-full bg-red-200  lg:w-1/2">
+        <div className="flex flex-col items-center lg:items-end w-full lg:w-1/2">
           {services.map((service, index) => (
             <div
               key={index}
