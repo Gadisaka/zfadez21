@@ -5,6 +5,7 @@ import Image, { StaticImageData } from "next/image";
 import img1 from "@/public/images/pexels-jibarofoto-1453005.jpg";
 import img2 from "@/public/images/pexels-rdne-76976734.jpg";
 import img3 from "@/public/images/pexels-ej-agumbay-698816-8552626.jpg";
+import { BookingButton } from "@/app/components/cal";
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -20,20 +21,27 @@ export default function Home() {
   interface Slide {
     image: StaticImageData;
     text: string;
+    description: string;
   }
 
   const slides: Slide[] = [
     {
       image: img1,
       text: "Experience breathtaking landscapes and vibrant cultures.",
+      description:
+        "Explore the world's most stunning landscapes and immerse yourself in the rich and diverse cultures that make each destination unique. From towering mountains to serene beaches, every moment is a feast for the senses.",
     },
     {
       image: img2,
       text: "Discover hidden gems and immerse yourself in new adventures.",
+      description:
+        "Uncover the secrets of lesser-known destinations and embark on thrilling adventures that will leave you with unforgettable memories. Whether it's hiking through lush forests or exploring ancient ruins, there's always something new to discover.",
     },
     {
       image: img3,
       text: "Unforgettable moments await—book your journey today.",
+      description:
+        "Create lasting memories with experiences that will stay with you forever. From the excitement of new discoveries to the joy of connecting with different cultures, your journey promises to be one of a kind. Don't wait—start your adventure now.",
     },
   ];
 
@@ -59,13 +67,15 @@ export default function Home() {
         alt={`Slide ${currentIndex + 1}`}
         className="relative object-cover w-full h-full transition-opacity duration-2000"
       />
-      <div className="absolute bottom-10 lg:right-10 mb-24 lg:mb-0 text-center lg:text-right z-30 w-full lg:max-w-lg">
-        <p className="text-2xl md:text-2xl font-semibold lg:text-3xl">
+      <div className="absolute bottom-10 lg:right-10 mb-24 lg:mb-0 text-center flex flex-col justify-center items-center lg:justify-end lg:items-end lg:text-right z-30 w-full p-5 lg:w-1/2 lg:mr-10">
+        <p className="text-2xl md:text-2xl font-semibold lg:text-6xl">
           {slides[currentIndex].text}
         </p>
-        <button className="mt-4 px-6 py-2 bg-[#543310] border-[#F8F4E1] border-2 rounded-lg shadow-md hover:bg-[#74512D] transition">
-          Book an Appointment
-        </button>
+        <p className="text-sm md:text-base lg:text-2xl mt-2 text-[#F8F4E1] w-3/4 lg:w-full bg-opacity-50 lg:bg-none ">
+          {slides[currentIndex].description}
+        </p>
+
+        {BookingButton()}
       </div>
       {/* Navigation Buttons */}
       <button
