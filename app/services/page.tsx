@@ -50,10 +50,7 @@ const Service = () => {
       <div className="w-full h-full flex">
         <div className="flex flex-col items-center lg:items-end w-full lg:w-1/2">
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="w-fit gap-5 p-4 mb-4 flex bg-[#F8F4E1] rounded-lg"
-            >
+            <div key={index} className="w-fit gap-5 p-4 mb-4 flex  rounded-lg">
               <div className="relative lg:w-[100px] w-[70px] flex justify-center items-center  h-[70-px] lg:h-[100px] ">
                 <div className="absolute border-2 bg-none border-[#543310] top-0 left-0 w-full h-full rounded-lg"></div>
                 <Image

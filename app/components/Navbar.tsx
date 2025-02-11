@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <div className="top-0 fixed  w-full z-50 flex justify-center">
-      <nav className="flex w-full lg:w-[80%] bg-[#543310] rounded-b-3xl justify-between items-center p-4 text-[#F8F4E1]">
+      <nav className="flex w-full lg:w-[80%] bg-[#543310] lg:rounded-b-3xl justify-between items-center p-4 text-[#F8F4E1]">
         <Link
           href="/"
           className="text-xl flex gap-3 justify-center items-center font-bold"

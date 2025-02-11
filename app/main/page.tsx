@@ -52,7 +52,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative w-full h-screen  overflow-hidden ">
+    <div className="relative w-full lg:h-screen h-[500px]  overflow-hidden ">
       <div className="absolute top-0 right-0 w-full h-full z-20 bg-gradient-to-l from-[#543310] opacity-60"></div>
       <Image
         src={slides[currentIndex].image}
