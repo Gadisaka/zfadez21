@@ -5,7 +5,9 @@ import Image, { StaticImageData } from "next/image";
 import img1 from "@/public/images/pexels-jibarofoto-1453005.jpg";
 import img2 from "@/public/images/pexels-rdne-76976734.jpg";
 import img3 from "@/public/images/pexels-ej-agumbay-698816-8552626.jpg";
+import barber from "@/public/barber.png";
 import { BookingButton } from "@/app/components/cal";
+import pattern from "@/public/images/pattern.png";
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -13,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 5000);
+    }, 20000);
 
     return () => clearInterval(interval);
   }, []);
@@ -29,19 +31,19 @@ export default function Home() {
       image: img1,
       text: "Experience breathtaking landscapes and vibrant cultures.",
       description:
-        "Explore the world's most stunning landscapes and immerse yourself in the rich and diverse cultures that make each destination unique. From towering mountains to serene beaches, every moment is a feast for the senses.",
+        "Explore stunning landscapes and immerse yourself in diverse cultures. From mountains to beaches, every moment is a feast for the senses.",
     },
     {
       image: img2,
       text: "Discover hidden gems and immerse yourself in new adventures.",
       description:
-        "Uncover the secrets of lesser-known destinations and embark on thrilling adventures that will leave you with unforgettable memories. Whether it's hiking through lush forests or exploring ancient ruins, there's always something new to discover.",
+        "Uncover secrets of lesser-known destinations and embark on thrilling adventures. Hike through forests or explore ancient ruins.",
     },
     {
       image: img3,
       text: "Unforgettable moments await—book your journey today.",
       description:
-        "Create lasting memories with experiences that will stay with you forever. From the excitement of new discoveries to the joy of connecting with different cultures, your journey promises to be one of a kind. Don't wait—start your adventure now.",
+        "Create lasting memories with unique experiences. Connect with different cultures and start your adventure now.",
     },
   ];
 
@@ -60,14 +62,28 @@ export default function Home() {
   };
 
   return (
-    <div className="relative w-full lg:h-screen h-[550px]  overflow-hidden ">
-      <div className="absolute top-0 right-0 w-full h-full z-20 bg-gradient-to-l from-[#543310] opacity-60"></div>
+    <div className="relative w-full lg:h-screen h-[500px] bg-[#543310] flex justify-center items-center overflow-hidden ">
       <Image
-        src={slides[currentIndex].image}
-        alt={`Slide ${currentIndex + 1}`}
-        className="relative object-cover w-full h-full transition-opacity duration-2000"
+        src={pattern}
+        alt="pattern"
+        className="absolute top-0 right-0 w-full block lg:hidden opacity-50 h-full object-cover transition-opacity duration-2000"
       />
-      <div className="absolute bottom-10 lg:right-10 mb-24 lg:mb-0 text-center flex flex-col justify-center items-center lg:justify-end lg:items-end lg:text-right z-30 w-full p-5 lg:w-1/2 lg:mr-10">
+      <div className="absolute top-0 right-0 w-full h-full z-20 bg-gradient-to-l from-[#000000] opacity-60"></div>
+      <h1 className="text-5xl font-bold block lg:hidden absolute top-20 z-30 ">
+        ZFADEZ21
+      </h1>
+      <div className="absolute bottom-10 flex lg:hidden flex-col z-30 justify-center items-center">
+        <p className="text-2xl font-semibold text-center">
+          Choose your preferred date and time to book your appointment today!
+        </p>
+        {BookingButton()}
+      </div>
+      <Image
+        src={barber}
+        alt="barber"
+        className="absolute left-0 bottom-0 scale-x-[-1] object-cover transition-opacity duration-2000"
+      />
+      <div className="absolute bottom-10 lg:right-10 mb-24 lg:mb-0 text-center hidden lg:flex flex-col justify-center items-center lg:justify-end lg:items-end lg:text-right z-30 w-full p-5 lg:w-1/2 lg:mr-10">
         <p className="text-2xl md:text-2xl font-semibold lg:text-6xl">
           {slides[currentIndex].text}
         </p>
