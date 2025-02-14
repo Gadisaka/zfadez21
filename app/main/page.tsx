@@ -7,7 +7,7 @@ import img2 from "@/public/images/pexels-rdne-76976734.jpg";
 import img3 from "@/public/images/pexels-ej-agumbay-698816-8552626.jpg";
 import barber from "@/public/barber.png";
 import { BookingButton } from "@/app/components/cal";
-import pattern from "@/public/images/pattern.png";
+// import pattern from "@/public/images/pattern.png";
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -63,11 +63,11 @@ export default function Home() {
 
   return (
     <div className="relative w-full lg:h-screen h-[500px] bg-[#543310] flex justify-center items-center overflow-hidden ">
-      <Image
+      {/* <Image
         src={pattern}
         alt="pattern"
         className="absolute top-0 right-0 w-full block lg:hidden opacity-50 h-full object-cover transition-opacity duration-2000"
-      />
+      /> */}
       <div className="absolute top-0 right-0 w-full h-full z-20 bg-gradient-to-l from-[#000000] opacity-60"></div>
       <h1 className="text-5xl font-bold block lg:hidden absolute top-20 z-30 ">
         ZFADEZ21
