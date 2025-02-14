@@ -62,28 +62,24 @@ export default function Home() {
   };
 
   return (
-    <div className="relative w-full h-screen bg-[#543310] flex justify-center items-center overflow-hidden ">
+    <div className="relative w-full h-screen bg-[#543310] flex flex-col lg:flex-row justify-end items-center lg:justify-center lg:items-end  overflow-hidden ">
       {/* <Image
         src={pattern}
         alt="pattern"
         className="absolute top-0 right-0 w-full block lg:hidden opacity-50 h-full object-cover transition-opacity duration-2000"
       /> */}
       <div className="absolute top-0 right-0 w-full h-full z-20 bg-gradient-to-l from-[#000000] opacity-60"></div>
-      <h1 className="text-5xl font-bold block lg:hidden absolute top-32 z-30 ">
+      <h1 className="text-5xl font-bold flex lg:hidden w-full my-5 justify-center text-center z-30">
         ZFADEZ21
       </h1>
-      <div className="absolute bottom-10 flex lg:hidden flex-col z-30 justify-center items-center">
-        <p className="text-2xl font-semibold text-center">
+      <Image src={barber} alt="barber" className=" scale-x-[-1]   z-30 " />
+      <div className=" flex lg:hidden flex-col bg-[#543310] p-5 z-30 justify-center shadow-lg items-center">
+        <p className="text-xl font-semibold text-center">
           Choose your preferred date and time to book your appointment today!
         </p>
         {BookingButton()}
       </div>
-      <Image
-        src={barber}
-        alt="barber"
-        className="absolute left-0 bottom-0 scale-x-[-1] object-cover transition-opacity duration-2000"
-      />
-      <div className="absolute bottom-10 lg:right-10 mb-24 lg:mb-0 text-center hidden lg:flex flex-col justify-center items-center lg:justify-end lg:items-end lg:text-right z-30 w-full p-5 lg:w-1/2 lg:mr-10">
+      <div className="text-center h-full  hidden lg:flex flex-col justify-center items-center lg:gap-5 lg:items-end lg:text-right z-30 w-full p-5 lg:w-1/2 ">
         <p className="text-2xl md:text-2xl font-semibold lg:text-6xl">
           {slides[currentIndex].text}
         </p>
