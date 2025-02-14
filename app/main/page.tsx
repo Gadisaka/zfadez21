@@ -62,14 +62,14 @@ export default function Home() {
   };
 
   return (
-    <div className="relative w-full lg:h-screen h-[500px] bg-[#543310] flex justify-center items-center overflow-hidden ">
+    <div className="relative w-full h-screen bg-[#543310] flex justify-center items-center overflow-hidden ">
       {/* <Image
         src={pattern}
         alt="pattern"
         className="absolute top-0 right-0 w-full block lg:hidden opacity-50 h-full object-cover transition-opacity duration-2000"
       /> */}
       <div className="absolute top-0 right-0 w-full h-full z-20 bg-gradient-to-l from-[#000000] opacity-60"></div>
-      <h1 className="text-5xl font-bold block lg:hidden absolute top-20 z-30 ">
+      <h1 className="text-5xl font-bold block lg:hidden absolute top-32 z-30 ">
         ZFADEZ21
       </h1>
       <div className="absolute bottom-10 flex lg:hidden flex-col z-30 justify-center items-center">
