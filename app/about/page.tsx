@@ -15,7 +15,7 @@ const About = () => {
         {/* left */}
         <div className="flex flex-col justify-center items-center">
           <h2 className="text-4xl text-center lg:text-4xl font-bold ">
-            Welcome to ZCHOPZ21
+            Welcome to ZFADEZ21
           </h2>
           <p className="text-3xl lg:text-4xl font-bold text-[#AF8F6F]">
             16+ Years Experience
