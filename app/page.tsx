@@ -4,6 +4,8 @@ import Service from "./services/page";
 import About from "./about/page";
 // import BookingPage from "./booking/page";
 import Shop from "./shop/page";
+import Footer from "./footer/page";
+import Gallery from "./gallery/page";
 
 const Page = () => {
   return (
@@ -13,6 +15,8 @@ const Page = () => {
       <Service />
       {/* <BookingPage /> */}
       <Shop />
+      <Gallery />
+      <Footer />
     </div>
   );
 };

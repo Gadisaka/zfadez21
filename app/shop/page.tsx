@@ -63,16 +63,16 @@ const Shop = () => {
         {items.map((product) => (
           <div
             key={product.id}
-            className="p-4 bg-[#543310] relative  shadow-lg rounded-2xl flex flex-col items-center justify-around text-center w-[300px] md:[400px] h-[400px] "
+            className="p-4 bg-[#543310] relative  shadow-lg rounded-2xl flex flex-col  items-center justify-around text-center w-[300px] md:[400px] h-[400px] "
           >
-            <div className="absolute bottom-0 right-0 w-full h-full rounded-2xl z-10 bg-gradient-to-t from-[#000000] opacity-60"></div>
+            <div className="absolute bottom-0 right-0 w-full h-full rounded-2xl  z-10 bg-gradient-to-t from-[#000000] opacity-60"></div>
 
             <Image
               src={product.image}
               alt={product.name}
               className="w-full h-[200px] object-cover rounded-2xl mb-4 z-30"
             />
-            <div>
+            <div className="z-20">
               <h3 className="text-lg font-semibold text-white z-30">
                 {product.name}
               </h3>

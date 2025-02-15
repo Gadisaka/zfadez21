@@ -45,14 +45,10 @@ const About = () => {
           </svg>
 
           <p className="text-lg lg:text-xl text-center w-[300px] lg:w-[600px]">
-            ZCHOPZ21 is a modern barbershop that offers a variety of services to
-            cater to the needs of our clients. Our team of experienced barbers
-            are skilled in the latest haircuts, beard trims, and grooming
-            services. We are committed to providing the best possible experience
-            for our clients by offering exceptional service and quality
-            haircuts. Whether you are looking for a classic haircut or a trendy
-            new style, we have you covered. Visit us today and experience the
-            ZCHOPZ21 difference.
+            ZCHOPZ21 is a modern barbershop offering a variety of services. Our
+            experienced barbers provide the latest haircuts, beard trims, and
+            grooming services. Visit us today for exceptional service and
+            quality haircuts.
           </p>
         </div>
         {/* right */}
