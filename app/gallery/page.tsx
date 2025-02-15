@@ -25,7 +25,10 @@ const Gallery = () => {
   }, []);
 
   return (
-    <div className="w-full flex flex-col items-center justify-center relative bg-[#fcf9f5]  py-5">
+    <div
+      className="w-full flex flex-col items-center justify-center relative bg-[#fcf9f5]  py-5"
+      id="gallery"
+    >
       <h1 className="text-4xl font-bold my-6 text-[#543310]">Gallery</h1>
       <div className="w-full max-w-6xl flex gap-4 overflow-hidden relative">
         <div

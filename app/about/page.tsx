@@ -9,7 +9,10 @@ import img3 from "@/public/images/pexels-gustavo-fring-7447151.jpg";
 
 const About = () => {
   return (
-    <div className="w-full min-h-fit flex flex-col bg-[#fff] text-[#543310] p-10 lg:py-32 gap-28 justify-center items-center ">
+    <div
+      className="w-full min-h-fit flex flex-col bg-[#fff] text-[#543310] p-10 lg:py-32 gap-28 justify-center items-center "
+      id="about"
+    >
       {/* <h1 className="text-3xl font-bold w-full"> About</h1> */}
       <div className="w-full flex  justify-center items-center gap-10">
         {/* left */}

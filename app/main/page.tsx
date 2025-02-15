@@ -62,7 +62,10 @@ export default function Home() {
   };
 
   return (
-    <div className="relative w-full h-screen bg-[#543310] flex flex-col lg:flex-row justify-end md:items-center lg:justify-center lg:items-end  overflow-hidden ">
+    <div
+      className="relative w-full h-screen bg-[#543310] flex flex-col lg:flex-row justify-end md:items-center lg:justify-center lg:items-end  overflow-hidden "
+      id="home"
+    >
       <div className="absolute top-0 right-0 w-full h-full z-20 bg-gradient-to-l from-[#000000] opacity-60"></div>
       <h1 className="text-5xl font-bold flex lg:hidden flex-col w-full mb-5  relative items-center justify-center text-center z-30">
         ZFADEZ21

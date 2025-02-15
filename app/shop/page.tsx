@@ -57,7 +57,10 @@ const Shop = () => {
   };
 
   return (
-    <div className="w-full min-h-fit flex flex-col bg-[#fff]  gap-10 lg:p-10 justify-center items-center ">
+    <div
+      className="w-full min-h-fit flex flex-col bg-[#fff]  gap-10 lg:p-10 justify-center items-center "
+      id="shop"
+    >
       <h1 className="text-4xl font-bold my-6 lg:my-0 text-[#543310]">Shop</h1>
       <div className="w-full p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-4">
         {items.map((product) => (
@@ -80,9 +83,23 @@ const Shop = () => {
             </div>
             <button
               onClick={() => addToCart(product)}
-              className="text-[#543310] p-3 rounded-lg bg-white font-bold  z-30"
+              className="text-[#543310] p-1 px-3 rounded-lg bg-white font-bold flex items-center gap-2 z-30"
             >
-              Add to Cart
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="w-5 h-5"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m2-9h10m0 0l2 9m-2-9H7"
+                />
+              </svg>
+              Order
             </button>
           </div>
         ))}

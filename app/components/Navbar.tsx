@@ -5,23 +5,23 @@ const Navbar = () => {
   const items = [
     {
       text: "Home",
-      href: "/",
-    },
-    {
-      text: "Services",
-      href: "/services",
-    },
-    {
-      text: "Booking",
-      href: "/booking",
-    },
-    {
-      text: "Shop",
-      href: "/shop",
+      href: "#home",
     },
     {
       text: "About",
-      href: "/about",
+      href: "#about",
+    },
+    {
+      text: "Services",
+      href: "#services",
+    },
+    {
+      text: "Shop",
+      href: "#shop",
+    },
+    {
+      text: "Gallery",
+      href: "#gallery",
     },
   ];
 
