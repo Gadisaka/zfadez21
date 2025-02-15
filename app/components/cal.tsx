@@ -41,7 +41,7 @@ export function BookingButton() {
       data-cal-namespace="30min"
       data-cal-link="gadisa-kasaye-tz2qwp/30min"
       data-cal-config='{"layout":"month_view","theme":"light"}'
-      className="mt-4 px-6 py-2 bg-[#543310] border-[#F8F4E1] border-2 rounded-lg shadow-md hover:bg-[#74512D] transition"
+      className="mt-4 px-6 py-2 md:py-6 lg:py-2 bg-[#543310] border-[#F8F4E1] border-2 rounded-lg shadow-md hover:bg-[#74512D] transition"
     >
       Book an Appointment
     </button>

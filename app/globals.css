@@ -1,8 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Style+Script&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+@layer utilities {
+  .text-outline {
+    -webkit-text-stroke: 0.5px rgb(0, 0, 0); /* Adjust thickness and color */
+    text-stroke: 1px black;
+  }
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.style-script-regular {
+  font-family: "Style Script", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .ubuntu-light {
   font-family: "Ubuntu", serif;

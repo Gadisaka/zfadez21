@@ -69,12 +69,15 @@ export default function Home() {
         className="absolute top-0 right-0 w-full block lg:hidden opacity-50 h-full object-cover transition-opacity duration-2000"
       /> */}
       <div className="absolute top-0 right-0 w-full h-full z-20 bg-gradient-to-l from-[#000000] opacity-60"></div>
-      <h1 className="text-5xl font-bold flex lg:hidden w-full my-5 justify-center text-center z-30">
+      <h1 className="text-5xl font-bold flex lg:hidden flex-col w-full mb-5  relative items-center justify-center text-center z-30">
         ZFADEZ21
+        <span className="style-script-regular absolute top-8 text-outline ">
+          barber shop
+        </span>
       </h1>
       <Image src={barber} alt="barber" className=" scale-x-[-1]   z-30 " />
-      <div className=" flex lg:hidden flex-col bg-[#543310] p-5 z-30 justify-center shadow-lg items-center">
-        <p className="text-xl font-semibold text-center">
+      <div className=" flex lg:hidden flex-col bg-[#543310] p-5 z-30 justify-center shadow-lg w-full md:h-[300px] items-center">
+        <p className="text-xl font-semibold text-center md:text-3xl">
           Choose your preferred date and time to book your appointment today!
         </p>
         {BookingButton()}

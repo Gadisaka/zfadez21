@@ -71,11 +71,11 @@ const Service = () => {
         <hr className="border-[#543310] w-[100px] lg:w-[200px] border-dashed " />
       </div>
       <div className="w-full h-full flex justify-center items-center">
-        <div className="grid grid-cols-1 lg:grid-cols-3 justify-items-center w-fit ">
+        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center w-fit ">
           {services.map((service, index) => (
             <div
               key={index}
-              className="w-[300px] h-[300px] gap-5 p-4 m-4 bg-[#fff] shadow-lg justify-center items-center text-center flex flex-col rounded-lg"
+              className=" w-[250px] md:w-[300px] h-[300px] gap-5 p-4 m-4 bg-[#fff] shadow-lg justify-center items-center text-center flex flex-col rounded-lg"
             >
               <Image
                 src={service.icon}
@@ -92,6 +92,7 @@ const Service = () => {
 
         {/* right side */}
       </div>
+      <hr className="border-[#543310]" />
     </div>
   );
 };
