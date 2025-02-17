@@ -30,7 +30,7 @@ const Footer = () => {
     <div className="w-full h-fit relative bg-[#543310] p-10 lg:px-32">
       <div className="absolute bottom-0 right-0 w-full h-full z-10 bg-gradient-to-t from-black opacity-60"></div>
 
-      <div className="relative z-20 container flex flex-col md:flex-row gap-5 justify-between items-center">
+      <div className="relative z-20 container flex flex-col md:flex-row gap-5 justify-between items-start">
         {/* Contacts */}
         <div>
           <h3 className="text-lg font-bold">Contact Us</h3>

@@ -78,7 +78,7 @@ const Service = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className=" w-[300px] h-[300px] gap-5 p-4 m-4 bg-[#fff] shadow-lg justify-center items-center text-center flex flex-col rounded-lg"
+              className="w-[95%] md:w-[300px] h-[300px] gap-5 p-4 m-4 bg-[#fff] shadow-lg justify-center items-center text-center flex flex-col rounded-lg"
             >
               <Image
                 src={service.icon}

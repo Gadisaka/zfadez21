@@ -2,15 +2,15 @@
 
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import img1 from "@/public/images/IMG_20250211_102439_921.jpg";
-import img2 from "@/public/images/IMG_20250211_102439_921.jpg";
-import img3 from "@/public/images/IMG_20250211_102439_921.jpg";
-import img5 from "@/public/images/IMG_20250211_102439_921.jpg";
-import img6 from "@/public/images/IMG_20250211_102439_921.jpg";
+import img1 from "@/public/gallery/IMG-2795-e1719339725454 (1).jpg";
+import img2 from "@/public/gallery/IMG-2797-e1719339782480 (1).jpg";
+import img3 from "@/public/gallery/IMG-2798.jpg";
+import img4 from "@/public/gallery/IMG-2799.jpg";
+import img5 from "@/public/gallery/IMG-2803-1-1.jpg";
+import img6 from "@/public/gallery/IMG-2804.jpg";
 import img7 from "@/public/images/IMG_20250211_102439_921.jpg";
-import img8 from "@/public/images/IMG_20250211_102439_921.jpg";
 
-const images = [img1, img2, img3, img5, img6, img7, img8];
+const images = [img1, img2, img3, img4, img6, img7, img5, img2, img4];
 
 const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

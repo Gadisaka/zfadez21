@@ -67,12 +67,9 @@ const Navbar = () => {
 
         {/* Mobile Dropdown Menu */}
         {menuOpen && (
-          <ul className="absolute top-16 right-4 w-48 bg-[#543310] rounded-lg shadow-lg flex flex-col lg:hidden">
+          <ul className="absolute top-16 right-4 w-48 bg-opacity-50 backdrop-blur-md border  text-center bg-[#543310] border-[#AF8F6F] rounded-lg shadow-lg flex flex-col lg:hidden">
             {items.map((item, index) => (
-              <li
-                key={index}
-                className="p-3 border-b border-[#AF8F6F] last:border-none"
-              >
+              <li key={index} className="p-3">
                 <Link href={item.href} onClick={() => setMenuOpen(false)}>
                   {item.text}
                 </Link>

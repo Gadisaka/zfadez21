@@ -23,8 +23,7 @@ const items: Product[] = [
     name: "Professional High Torque Trimmer",
     price: 100,
     image: item1,
-    description:
-      "A high-performance trimmer designed for professional use, offering superior torque and precision.",
+    description: "A high-performance trimmer designed for professional use.",
   },
   {
     id: 2,
@@ -48,15 +47,15 @@ const Shop: React.FC = () => {
 
   return (
     <div
-      className="w-full min-h-fit flex flex-col bg-[#fff] gap-10 lg:p-10 justify-center items-center"
+      className="w-full min-h-fit flex flex-col bg-[#fff] gap-10 lg:p-10 justify-center items-center pb-10"
       id="shop"
     >
       <h1 className="text-4xl font-bold my-6 lg:my-0 text-[#543310]">Shop</h1>
-      <div className="w-full p-4 flex flex-col lg:flex-row justify-center items-center gap-4">
+      <div className="w-full md:p-4 flex flex-col lg:flex-row justify-center items-center gap-4">
         {items.map((product) => (
           <div
             key={product.id}
-            className="p-4 bg-[#543310] relative shadow-lg rounded-2xl flex flex-col items-center justify-around text-center w-[300px] md:[400px] h-[400px]"
+            className="p-4 bg-[#543310] relative shadow-lg rounded-2xl flex flex-col items-center justify-around text-center w-[95%] md:w-[300px] h-[400px]"
           >
             <div className="absolute bottom-0 right-0 w-full h-full rounded-2xl z-10 bg-gradient-to-t from-[#000000] opacity-60"></div>
             <Image
