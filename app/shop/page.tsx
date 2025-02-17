@@ -55,7 +55,7 @@ const Shop: React.FC = () => {
         {items.map((product) => (
           <div
             key={product.id}
-            className="p-4 bg-[#543310] relative shadow-lg rounded-2xl flex flex-col items-center justify-around text-center w-[95%] md:w-[300px] h-[400px]"
+            className="p-4 bg-[#543310] relative shadow-lg rounded-2xl flex flex-col items-center justify-around text-center w-[300px] h-[400px]"
           >
             <div className="absolute bottom-0 right-0 w-full h-full rounded-2xl z-10 bg-gradient-to-t from-[#000000] opacity-60"></div>
             <Image
