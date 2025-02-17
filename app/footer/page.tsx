@@ -2,23 +2,26 @@ import React from "react";
 
 const footerData = {
   contacts: [
-    { type: "Email", value: "contact@example.com" },
-    { type: "Phone", value: "+123 456 7890" },
+    { type: "Email", value: "zfadez21@gmail.com" },
+    { type: "Phone", value: "+1 469-643-8566" },
   ],
-  location: "123 Main Street, City, Country",
+  location: "12101 Greenville Ave #108B, Dallas, TX, 75243",
   activeHours: [
-    { day: "Monday", hours: "9:00 AM - 5:00 PM" },
-    { day: "Tuesday", hours: "9:00 AM - 5:00 PM" },
-    { day: "Wednesday", hours: "9:00 AM - 5:00 PM" },
-    { day: "Thursday", hours: "9:00 AM - 5:00 PM" },
-    { day: "Friday", hours: "9:00 AM - 5:00 PM" },
-    { day: "Saturday", hours: "10:00 AM - 2:00 PM" },
-    { day: "Sunday", hours: "Closed" },
+    { day: "Monday", hours: "Closed" },
+    { day: "Tuesday", hours: "10:00 AM - 7:00 PM" },
+    { day: "Wednesday", hours: "10:00 AM - 7:00 PM" },
+    { day: "Thursday", hours: "10:00 AM - 7:00 PM" },
+    { day: "Friday", hours: "10:00 AM - 7:00 PM" },
+    { day: "Saturday", hours: "10:00 AM - 7:00 PM" },
+    { day: "Sunday", hours: "12:00 PM - 6:00 PM" },
   ],
   socialMedia: [
     { platform: "Facebook", href: "https://facebook.com" },
     { platform: "Twitter", href: "https://twitter.com" },
-    { platform: "LinkedIn", href: "https://linkedin.com" },
+    {
+      platform: "Instagram",
+      href: "https://www.instagram.com/zfadez21/?igshid=YmMyMTA2M2Y%3D",
+    },
   ],
 };
 

@@ -30,7 +30,7 @@ const Gallery = () => {
       id="gallery"
     >
       <h1 className="text-4xl font-bold my-6 text-[#543310]">Gallery</h1>
-      <div className="w-full max-w-6xl flex gap-4 overflow-hidden relative">
+      <div className="w-full  flex gap-4 overflow-hidden relative">
         <div
           className="flex transition-transform duration-500"
           style={{

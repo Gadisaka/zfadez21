@@ -48,10 +48,11 @@ const About = () => {
           </svg>
 
           <p className="text-lg lg:text-xl text-center w-[300px] lg:w-[600px]">
-            ZCHOPZ21 is a modern barbershop offering a variety of services. Our
-            experienced barbers provide the latest haircuts, beard trims, and
-            grooming services. Visit us today for exceptional service and
-            quality haircuts.
+            Yiheyis/Zfadez21 Barbershop offers a rich experience to the
+            communities of Dallas and Garland. We provide professional haircuts
+            and coloring services for special occasions such as weddings,
+            graduations, and more, ensuring all your haircare needs are
+            conveniently met under one roof.
           </p>
         </div>
         {/* right */}
