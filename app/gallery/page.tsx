@@ -15,7 +15,7 @@ const images = [img1, img2, img3, img4, img6, img7, img5, img2, img4];
 const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const imagesPerSlide =
-    typeof window !== "undefined" && window.innerWidth < 768 ? 1 : 4;
+    typeof window !== "undefined" && window.innerWidth < 768 ? 1 : 6;
 
   useEffect(() => {
     const interval = setInterval(() => {

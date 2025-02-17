@@ -97,12 +97,12 @@ const testimonials: Testimonial[] = [
 const Testimonials: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const cardsPerSlide =
-    typeof window !== "undefined" && window.innerWidth < 768 ? 1 : 4;
+    typeof window !== "undefined" && window.innerWidth < 768 ? 1 : 5;
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 4) % testimonials.length);
-    }, 5000);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }, 10000);
     return () => clearInterval(interval);
   }, []);
 
@@ -154,13 +154,13 @@ const Testimonials: React.FC = () => {
             <FaStar key={i} size={20} />
           ))}
         </div>
-        <p>Based on 100+ reviews</p>
+        <p>Based on 140+ reviews</p>
       </div>
 
       {/* Testimonials Slider */}
       <div className="overflow-hidden relative z-20">
         <div
-          className="flex transition-transform duration-500 ease-in-out  gap-0 md:gap-5"
+          className="flex transition-transform duration-500  gap-0 md:gap-5"
           style={{
             transform: `translateX(-${(currentIndex * 100) / cardsPerSlide}%)`,
           }}

@@ -138,7 +138,7 @@ export default function Home() {
             key={index}
             title={`Go to slide ${index + 1}`}
             className={`lg:w-3 w-2 h-2 lg:h-3 rounded-full transition-colors duration-300 ${
-              currentIndex === index ? "bg-[#543310]" : "bg-gray-500"
+              currentIndex === index ? "bg-[#F8F4E1]" : "bg-gray-500"
             }`}
             onClick={() => goToSlide(index)}
           />

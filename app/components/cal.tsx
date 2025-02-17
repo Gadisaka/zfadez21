@@ -27,7 +27,7 @@ export default function Booking() {
 export function BookingButton() {
   useEffect(() => {
     (async function () {
-      const cal = await getCalApi({ namespace: "30min" });
+      const cal = await getCalApi({ namespace: "haircut-at-zfadez21" });
       cal("ui", {
         theme: "light",
         cssVarsPerTheme: { light: { "cal-brand": "#543310" }, dark: {} },
@@ -38,8 +38,8 @@ export function BookingButton() {
   }, []);
   return (
     <button
-      data-cal-namespace="30min"
-      data-cal-link="gadisa-kasaye-tz2qwp/30min"
+      data-cal-namespace="haircut-at-zfadez21"
+      data-cal-link="zfadez21/haircut-at-zfadez21"
       data-cal-config='{"layout":"month_view","theme":"light"}'
       className="mt-4 px-6 py-2 md:py-6 lg:py-2 bg-[#543310] border-[#F8F4E1] border-2 rounded-lg shadow-md hover:bg-[#74512D] transition"
     >

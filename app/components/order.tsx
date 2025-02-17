@@ -15,7 +15,10 @@ const OrderDialog: React.FC<OrderDialogProps> = ({
   quantity,
   setQuantity,
 }) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   if (!product) return null;
 
@@ -24,14 +27,8 @@ const OrderDialog: React.FC<OrderDialogProps> = ({
 
   // Function to format phone number as (XXX) XXX-XXXX
   const formatPhoneNumber = (value: string) => {
-    // Remove all non-numeric characters
-    let cleaned = value.replace(/\D/g, "");
-
-    // Format the number
-    if (cleaned.length > 10) {
-      cleaned = cleaned.slice(0, 10); // Limit to 10 digits
-    }
-
+    let cleaned = value.replace(/\D/g, ""); // Remove all non-numeric characters
+    if (cleaned.length > 10) cleaned = cleaned.slice(0, 10); // Limit to 10 digits
     if (cleaned.length > 6) {
       return `(${cleaned.slice(0, 3)}) ${cleaned.slice(3, 6)}-${cleaned.slice(
         6
@@ -41,12 +38,44 @@ const OrderDialog: React.FC<OrderDialogProps> = ({
     } else if (cleaned.length > 0) {
       return `(${cleaned}`;
     }
-
     return cleaned;
   };
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPhone(formatPhoneNumber(e.target.value));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const formData = {
+      name,
+      email,
+      phone,
+      product: product.name,
+      quantity,
+      totalPrice: product.price * quantity,
+    };
+
+    setIsLoading(true);
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert("Order placed successfully!");
+        onClose();
+      } else {
+        alert("Error placing order.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -55,7 +84,7 @@ const OrderDialog: React.FC<OrderDialogProps> = ({
         <h2 className="text-2xl font-bold mb-4">Order {product.name}</h2>
         <p className="mb-4">Price: ${product.price * quantity}</p>
 
-        <div className="flex items-center gap-4 mb-4 ">
+        <div className="flex items-center gap-4 mb-4">
           <button
             onClick={handleDecrease}
             className="bg-gray-200 px-3 py-1 rounded font-bold"
@@ -71,17 +100,21 @@ const OrderDialog: React.FC<OrderDialogProps> = ({
           </button>
         </div>
 
-        <form className="flex flex-col gap-4">
+        <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder="Your Name"
             className="border p-2 rounded"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             required
           />
           <input
-            type="text"
+            type="email"
             placeholder="Your Email"
             className="border p-2 rounded"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
           <input
@@ -90,11 +123,15 @@ const OrderDialog: React.FC<OrderDialogProps> = ({
             className="border p-2 rounded"
             value={phone}
             onChange={handlePhoneChange}
-            maxLength={14} // Prevents extra characters
+            maxLength={14}
             required
           />
-          <button type="submit" className="bg-[#543310] text-white p-2 rounded">
-            Place Order
+          <button
+            type="submit"
+            className="bg-[#543310] text-white p-2 rounded"
+            disabled={isLoading}
+          >
+            {isLoading ? "Placing Order..." : "Place Order"}
           </button>
         </form>
 
