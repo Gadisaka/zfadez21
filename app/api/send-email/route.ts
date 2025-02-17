@@ -1,9 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-// fix before production
-
-const resend = new Resend("re_4YBLdV11_KHEGPPy7RmEfNVB4H7hgTk4h");
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   if (req.method !== "POST") {
