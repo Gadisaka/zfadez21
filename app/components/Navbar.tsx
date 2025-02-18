@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
+import { BookingButton } from "./cal";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -39,7 +40,8 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="space-x-4 hidden lg:flex">
+        <ul className="space-x-4 hidden lg:flex justify-center items-center">
+          {BookingButton()}
           {items.map((item, index) => (
             <li key={index} className="hover:bg-[#AF8F6F] p-2 rounded-lg">
               <Link href={item.href}>{item.text}</Link>

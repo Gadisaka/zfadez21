@@ -41,7 +41,7 @@ export function BookingButton() {
       data-cal-namespace="haircut-at-zfadez21"
       data-cal-link="zfadez21/haircut-at-zfadez21"
       data-cal-config='{"layout":"month_view","theme":"light"}'
-      className="mt-4 px-6 py-2 md:py-6 lg:py-2 bg-[#543310] border-[#F8F4E1] border-2 rounded-lg shadow-md hover:bg-[#74512D] transition"
+      className="px-6 py-2 md:py-6 lg:py-2 bg-[#543310] border-[#F8F4E1] border-2 rounded-lg shadow-md hover:bg-[#74512D] transition"
     >
       Book an Appointment
     </button>
